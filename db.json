@@ -1,0 +1,18 @@
+{
+  "posts": [
+    {
+      "stuId": "001",
+      "stuName": "Abhishek Kulkarni",
+      "course": "PCMB",
+      "stuYear": "First Year",
+      "feesApp": "PCMB(1,00,000)",
+      "feesPaid": "60,000",
+      "pendFees": "40,000",
+      "id": 1
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
