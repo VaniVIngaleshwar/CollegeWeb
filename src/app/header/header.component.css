@@ -3,8 +3,8 @@
 .displayflex{
     display: flex;
     align-items: center;
-    margin-left: 200px;
-    margin-top: -15px;
+    margin-left: 180px;
+    margin-top: -40px;
    
 }
 
@@ -28,7 +28,7 @@
     padding: 20px;
     padding-left: 0px;
     text-align: center;
-    margin-left: 5px;
+    margin-left: -5px;
 }
 
 .list{
@@ -36,7 +36,7 @@
     align-items: center;
     background-color: #28282B;
     height: 40px;
-    margin-top: -18px;
+    margin-top: -40px;
     padding-left: 265px;
 }
 

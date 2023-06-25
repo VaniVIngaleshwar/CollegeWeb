@@ -1,0 +1,18 @@
+{
+  "posts": [
+    {
+      "stuId": "002",
+      "stuName": "john",
+      "course": "PCMB",
+      "stuYear": "First Year",
+      "feesApp": "PCMB(1,00,000)",
+      "feesPaid": "50,000",
+      "pendFees": "50,000",
+      "id": 1
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,1 +1,116 @@
-<p>fees works!</p>
+<!-- <div class="stdform">
+    <form>
+        <div class="stdid">
+            <label for="studentId">Student Id : </label>
+            <input type="text" placeholder="student id">
+        </div>
+        <div class="stdname">
+            <label for="studentname">Student Name : </label>
+            <input type="text" placeholder="student name">
+        </div>
+        <div class="course">
+            <label for="course">course:</label>
+            PCMB<input type="radio" name="course">
+            PCMCs<input type="radio" name="course">
+        </div>
+     
+        <div class="feeapp">
+            <label for="feesapplicable">Fees Applicable : </label>
+            <select id="feesapplicable">
+              <option value="PCMB">PCMB : Yearly (1,00,000)</option>
+              <option value="PCMCS">PCMCS : Yearly (1,10,000)</option>
+            </select>
+          </div>
+          
+        <div class="feepaid">
+            <label for="feespaid">Fees Paid : </label>
+            <input type="text" placeholder="fees paid">
+        </div>
+        <div class="pending">
+            <label for="pendingfees">Pending Fees : </label>
+            <input type="text" placeholder="pending fees">
+        </div>
+        <div class="submit">
+            <button type="submit">submit</button>
+        </div>
+    </form>
+</div> -->
+
+
+<div class="form-style-2">
+    <form [formGroup]="formValue">
+        <div class="form-style-2-heading">Fee Structure</div>
+        <div class="stdid">
+            <label for="studentId"><span>Student Id :</span></label>
+            <input type="text" formControlName="studentId" class="input-field" placeholder="Student ID">
+        </div>
+        <div class="stdname">
+            <label for="studentname"><span>Student Name :</span></label>
+            <input type="text" formControlName="studentName" class="input-field" placeholder="Student Name">
+        </div>
+        <div class="course">
+            <label for="course"><span>Course :</span></label>
+            <select formControlName="course" id="course" class="select-field">
+                <option value="PCMB">PCMB</option>
+                <option value="PCMCS">PCMCs</option>
+            </select>
+        </div>
+        <div class="feeapp">
+            <label for="studentyear"><span>Student Year :</span></label>
+            <select formControlName="studentYear" id="feesapplicable" class="select-field">
+                <option value="First Year">First Year</option>
+                <option value="Second Year">Second Year</option>
+            </select>
+        </div>
+        <div class="feeapp">
+            <label for="feesapplicable"><span>Fees Applicable :</span></label>
+            <select formControlName="feesApplicable" id="feesapplicable" class="select-field">
+                <option value="PCMB(1,00,000)">PCMB : Yearly (1,00,000)</option>
+                <option value="PCMCS(1,50,000)">PCMCS : Yearly (1,10,000)</option>
+            </select>
+        </div>
+        <div class="feepaid">
+            <label for="feespaid"><span>Fees Paid :</span></label>
+            <input type="text" formControlName="feesPaid" class="input-field" placeholder="Fees Paid">
+        </div>
+        <div class="pending">
+            <label for="pendingfees"><span>Pending Fees :</span></label>
+            <input type="text" formControlName="feesPending" class="input-field" placeholder="Pending Fees">
+        </div>
+        <div class="submit">
+            <input type="submit" (click)="posttudentDetails()" value="Submit">
+            <input type="submit" (click)="updateStudentDetails()" value="Update Student">
+        </div>
+
+
+    </form>
+</div>
+
+<table id="student">
+    <tr>
+        <th>Id</th>
+        <th>StusentId</th>
+        <th>Stusent Name</th>
+        <th>Course</th>
+        <th>Student Year</th>
+        <th>Fees Applicable</th>
+        <th>Fees Paid</th>
+        <th>Fees Pending</th>
+        <th>Actions</th>
+
+    </tr>
+    <tr *ngFor="let raw of studentData">
+        <td>{{raw.id}}</td>
+        <td>{{raw.stuId}}</td>
+        <td>{{raw.stuName}}</td>
+        <td>{{raw.course}}</td>
+        <td>{{raw.stuYear}}</td>
+        <td>{{raw.feesApp}}</td>
+        <td>{{raw.feesPaid}}</td>
+        <td>{{raw.pendFees}}</td>
+        <td>
+            <button (click)="onEdit(raw)" class="edit">Edit</button>
+            <button (click)="deleteStudentDetails(raw)" class="del">Delete</button>
+        </td>
+    </tr>
+</table>

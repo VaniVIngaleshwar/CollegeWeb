@@ -1,0 +1,21 @@
+h3{
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    margin-left: 50px;
+}
+
+p{
+    margin-left: 50px;
+    font-family: 'Pathway Extreme', sans-serif;
+    letter-spacing: 1px;
+    text-align: justify;
+    margin-right: 50px;
+}
+
+ul li{
+    margin-left: 50px;
+    font-family: 'Pathway Extreme', sans-serif;
+    letter-spacing: 1px;
+    text-align: justify;
+    margin-right: 50px;
+}
