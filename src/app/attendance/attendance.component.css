@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Pathway+Extreme:wght@300&display=swap');
+
+
+/* .card{
+    margin-top: 5%;
+    border:solid black;
+    width: 500px;
+    padding: 40px;
+  margin-left:30%;
+  background:#BBD6B8;
+}
+
+.form{
+    width: 50%;
+} */
+
+.container{
+    width: 40%;
+  margin-left: 30%;
+    border: 2px black solid;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

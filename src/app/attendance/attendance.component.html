@@ -1,0 +1,28 @@
+
+  <h2 style="text-align: center; color: blue;">Student Attendance Sheet</h2>
+  <button class="btn btn-dark" style="margin-top: 2%; margin-left: 2%; color: blue;" routerLink="/attendance-record">
+    Records</button>
+    <div class="container">
+  <form [formGroup]="attform">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"  class="form-control" formControlName="name"><br><br>
+    
+    <label for="course">Course:</label>
+    <input type="text" id="course" name="course" class="form-control" formControlName="course"><br><br>
+    
+    <label for="rollno">Roll Number:</label>
+    <input type="text" id="rollno" name="rollno" class="form-control" formControlName="rollno"><br><br>
+    
+    <label for="date">Status:</label><br>
+    <input type="radio" id="present" name="date" value="present" checked>
+    <label for="present">Present</label><br>
+    <input type="radio" id="absent" name="date" value="absent">
+    <label for="absent">Absent</label><br><br>
+    
+    <!-- <input type="submit" value="Submit"> -->
+    <button type="submit" (click)="addRec(this.attform.value)" type="button" type="button"
+    class="btn btn-dark mw-75" style="text-align: center; padding-bottom: 5px;"
+    [disabled]="!attform.invalid">Save</button>
+    <br>
+  </form>
+</div>

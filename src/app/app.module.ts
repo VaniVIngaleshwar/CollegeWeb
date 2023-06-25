@@ -7,6 +7,13 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { TimetableComponent } from './timetable/timetable.component';
 import { FooterComponent } from './footer/footer.component';
+import { CourseDetailsComponent } from './course-details/course-details.component';
+import { FeesComponent } from './fees/fees.component';
+import { AttendanceComponent } from './attendance/attendance.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AttendanceRecordComponent } from './attendance-record/attendance-record.component';
+
 
 @NgModule({
   declarations: [
@@ -14,11 +21,20 @@ import { FooterComponent } from './footer/footer.component';
     HeaderComponent,
     HomeComponent,
     TimetableComponent,
-    FooterComponent
+    FooterComponent,
+    CourseDetailsComponent,
+    FeesComponent,
+    AttendanceComponent,
+    AttendanceRecordComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule ,
+    ReactiveFormsModule
+    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

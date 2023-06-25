@@ -1,0 +1,33 @@
+<div class="container">
+    <table class="table">
+      <thead class="table-header">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>course</th>
+          <th>Rollno</th>
+          <!-- <th>Date</th> -->
+          <th>Status</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of attdata; let i=index" class="table-row">
+          <td class="table-data">{{i}}</td>
+          <td class="table-data">{{item.name}}</td>
+          <td class="table-data">{{item.course}}</td>
+          <td class="table-data">{{item.rollno}}</td>
+          <!-- <td class="table-data">{{item.date}}</td> -->
+          <td class="table-data">{{item.status}}</td>
+          <!-- <td class="table-data">
+            <button routerLink="/bupdate/{{item.id}}" type="button" style="color: #28282b;">Update</button>
+          </td> -->
+          <td class="table-data">
+            <button (click)="deleteRec(item)" type="button" class="btn btn-dark btn-small ms-3">
+             Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
