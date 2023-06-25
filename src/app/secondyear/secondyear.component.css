@@ -1,0 +1,164 @@
+/* .container{
+    margin-left: 450px;
+    margin-top: 50px;
+  }
+  
+  h3{
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    margin-left: 90px;
+  } */
+  .container {
+    width: 400px;
+    height: 340px;
+    margin-left: 150px;
+    padding: 20px;
+    margin-top: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Pathway Extreme', sans-serif;
+    font-size: 15px;
+    color: black;
+    box-shadow: 1px 1px 10px #888888;
+    float: left;
+    margin-bottom: 50px;
+  }
+  
+  .container h3 {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+  }
+  
+  .atdform {
+    margin-top: 20px;
+  }
+  
+  .atdform form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .atdform input[type="number"],
+  .atdform input[type="date"],
+  .atdform select {
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    height: 30px;
+    border-radius: 5px;
+    font-family: 'Pathway Extreme', sans-serif;
+    font-size: 15px;
+  }
+  
+  .radio {
+    margin-right: 5px;
+    margin-top: 10px;
+  }
+  
+  
+  
+  .atdform button {
+    padding: 10px 20px;
+    background-color: #28282b;
+    color: whitesmoke;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+  }
+
+  #btn1{
+    margin-right: 10px;
+  }
+  
+  .atdform button:hover {
+    background-color: black;
+  }
+
+  .container2 {
+    width: 400px;
+    height: 340px;
+    margin-left: 150px;
+    padding: 20px;
+    margin-top: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Pathway Extreme', sans-serif;
+    font-size: 15px;
+    color: black;
+    box-shadow: 1px 1px 10px #888888;
+    float: left;
+  }
+  
+  .container2 h3 {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+  }
+
+  
+  .table {
+    width: 100%;
+    /* border: 1px solid #eeeeee; */
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .table-header {
+    display: flex;
+    width: 100%;
+    background: #28282b;
+    padding: 12px 0; /* Assuming $half-spacing-unit = 12px */
+    color: whitesmoke;
+    font-family: 'Pathway Extreme', sans-serif;
+  }
+  
+  .table-row {
+    display: flex;
+    width: 100%;
+    padding: 12px 0; /* Assuming $half-spacing-unit = 12px */
+    font-family: 'Pathway Extreme', sans-serif;
+    &:nth-of-type(odd) {
+      background: #eeeeee;
+    }
+  }
+  
+  .table-data,
+  .header__item {
+    flex: 1 1 20%;
+    text-align: center;
+  }
+  
+  .header__item {
+    text-transform: uppercase;
+  }
+  
+  .filter__link {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    padding-left: 24px; /* Assuming $base-spacing-unit = 24px */
+    padding-right: 24px; /* Assuming $base-spacing-unit = 24px */
+  
+    &::after {
+      content: "";
+      position: absolute;
+      right: -18px; /* Assuming $half-spacing-unit = 12px */
+      color: white;
+      font-size: 12px; /* Assuming $half-spacing-unit = 12px */
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  
+    &.desc::after {
+      content: "(desc)";
+    }
+  
+    &.asc::after {
+      content: "(asc)";
+    }
+  }
+  
+  

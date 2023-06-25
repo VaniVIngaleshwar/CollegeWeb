@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AttendanceService } from '../attendance.service';
-import { attendanceModel } from './attendance model';
+// import { attendanceModel } from './attendance model';
 
 @Component({
   selector: 'app-attendance',
@@ -9,58 +9,58 @@ import { attendanceModel } from './attendance model';
   styleUrls: ['./attendance.component.css']
 })
 export class AttendanceComponent {
-  attform!: FormGroup;
-  attdata: undefined | attendanceModel[];
+  // attform!: FormGroup;
+  // attdata: undefined | attendanceModel[];
 
-  constructor(private formbuilder: FormBuilder, private attapi:AttendanceService) { }
+  // constructor(private formbuilder: FormBuilder, private attapi:AttendanceService) { }
 
-  ngOnInit(): void {
-    this.attform = this.formbuilder.group({
-      name: ['', Validators.required],
-      // date: ['', Validators.required],
-      status:['',Validators.required],
-      rollno:['',Validators.required],
-      course:['', Validators.required]
-    })
-    this.getRec();
-  }
-
-  // get date() {
-  //   return this.attform.get('date');
+  // ngOnInit(): void {
+  //   this.attform = this.formbuilder.group({
+  //     name: ['', Validators.required],
+  //     // date: ['', Validators.required],
+  //     status:['',Validators.required],
+  //     rollno:['',Validators.required],
+  //     course:['', Validators.required]
+  //   })
+  //   this.getRec();
   // }
 
-  get name() {
-    return this.attform.get('name');
-  }
-  get status() {
-    return this.attform.get('status');
-  }
-  get rollno() {
-    return this.attform.get('rollno');
-  }
-  get course() {
-    return this.attform.get('course');
-  }
-  addRec( attdata:  attendanceModel) {
-    this.attapi.addRec( attdata).subscribe((res => {
-      this.attform.reset();
-    }))
-    this.getRec();
-    alert("added to Records");
-  }
+  // // get date() {
+  // //   return this.attform.get('date');
+  // // }
 
-  getRec() {
-    this.attapi.getRec().subscribe(res => {
-      this. attdata = res;
-    })
-  }
+  // get name() {
+  //   return this.attform.get('name');
+  // }
+  // get status() {
+  //   return this.attform.get('status');
+  // }
+  // get rollno() {
+  //   return this.attform.get('rollno');
+  // }
+  // get course() {
+  //   return this.attform.get('course');
+  // }
+  // addRec( attdata:  attendanceModel) {
+  //   this.attapi.addRec( attdata).subscribe((res => {
+  //     this.attform.reset();
+  //   }))
+  //   this.getRec();
+  //   alert("added to Records");
+  // }
 
-  deleteRec( attdata: any) {
-    this.attapi.deleteRec( attdata.id).subscribe(res => {
-      this.getRec();
-    })
-    alert("delete records");
-  }
+  // getRec() {
+  //   this.attapi.getRec().subscribe(res => {
+  //     this. attdata = res;
+  //   })
+  // }
+
+  // deleteRec( attdata: any) {
+  //   this.attapi.deleteRec( attdata.id).subscribe(res => {
+  //     this.getRec();
+  //   })
+  //   alert("delete records");
+  // }
 
   // searchStudent(event: any) {
   //   if (event.target.value) {

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AttendanceService } from '../attendance.service';
-import { attendanceModel } from '../attendance/attendance model';
+// import { attendanceModel } from '../attendance/attendance model';
 
 
 @Component({
@@ -11,33 +11,33 @@ import { attendanceModel } from '../attendance/attendance model';
 })
 export class AttendanceRecordComponent {
 
-  attform!: FormGroup;
-  attdata: undefined | attendanceModel[];
+  // attform!: FormGroup;
+  // attdata: undefined | attendanceModel[];
 
-  constructor(private formbuilder: FormBuilder, private attapi: AttendanceService) { }
+  // constructor(private formbuilder: FormBuilder, private attapi: AttendanceService) { }
 
-  ngOnInit(): void {
-    this.attform = this.formbuilder.group({
-      name: ['', Validators.required],
-      // date: ['', Validators.required],
-      status:['',Validators.required],
-      rollno:['',Validators.required],
-      course:['', Validators.required]
-    })
-    this.getRec();
-  }
+  // ngOnInit(): void {
+  //   this.attform = this.formbuilder.group({
+  //     name: ['', Validators.required],
+  //     // date: ['', Validators.required],
+  //     status:['',Validators.required],
+  //     rollno:['',Validators.required],
+  //     course:['', Validators.required]
+  //   })
+  //   this.getRec();
+  // }
 
 
-  deleteRec( attdata: any) {
-    this.attapi.deleteRec( attdata.id).subscribe(res => {
-      this.getRec();
-    })
-    alert("delete record");
-  }
+  // deleteRec( attdata: any) {
+  //   this.attapi.deleteRec( attdata.id).subscribe(res => {
+  //     this.getRec();
+  //   })
+  //   alert("delete record");
+  // }
 
-  getRec() {
-    this.attapi.getRec().subscribe(res => {
-      this. attdata = res;
-    })
-  }  
+  // getRec() {
+  //   this.attapi.getRec().subscribe(res => {
+  //     this. attdata = res;
+  //   })
+  // }  
 }

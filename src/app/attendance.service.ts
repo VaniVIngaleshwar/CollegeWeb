@@ -1,35 +1,36 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { attendanceModel } from './attendance/attendance model';
+import { Observable } from 'rxjs';
+import { firstyearmodel } from './firstyear/firstyeardata/firstyearmodel';
+import { secondyearmodel } from './secondyear/secondyeardata/secondyearmodel';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class AttendanceService {
-  baseurl: string = "http://localhost:3000/attendance/";
-
+  firsturl: string = "http://localhost:3000/firstyearattendance/";
+  secondurl: string = "http://localhost:3000/secondyearattendance/";
+ 
   constructor(private http: HttpClient) { }
 
-  addRec(attdata: attendanceModel) {
-    return this.http.post<attendanceModel>(this.baseurl, attdata)
+  postFirstYearData(data: firstyearmodel){
+    return this.http.post<firstyearmodel>(this.firsturl,data);
   }
 
-  getRec() {
-    return this.http.get<attendanceModel[]>(this.baseurl);
+
+  postSecondYearData(data : secondyearmodel){
+    return this.http.post<secondyearmodel>(this.secondurl,data);
   }
 
-  deleteRec(id: number) {
-    return this.http.delete<attendanceModel>(this.baseurl + id);
+  getFirstYearDataByDateAndCourse(date: string, course: string) {
+    const params = { date: date, course: course };
+    return this.http.get<firstyearmodel[]>(this.firsturl, { params: params });
   }
 
-  updateRec(attdata: attendanceModel, id: number) {
-    return this.http.put<attendanceModel>(this.baseurl + id, attdata);
+  getSecondYearDataByDateAndCourse(date: string, course: string) {
+    const params = { date: date, course: course };
+    return this.http.get<secondyearmodel[]>(this.secondurl, { params: params });
   }
-
-  fetchData(id: number) {
-    return this.http.get<attendanceModel>(this.baseurl + id);
-  }
-
  
 }

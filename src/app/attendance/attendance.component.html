@@ -1,4 +1,4 @@
-
+<!-- 
   <h2 style="text-align: center; color: blue;">Student Attendance Sheet</h2>
   <button class="btn btn-dark" style="margin-top: 2%; margin-left: 2%; color: blue;" routerLink="/attendance-record">
     Records</button>
@@ -19,10 +19,20 @@
     <input type="radio" id="absent" name="date" value="absent">
     <label for="absent">Absent</label><br><br>
     
-    <!-- <input type="submit" value="Submit"> -->
+  
     <button type="submit" (click)="addRec(this.attform.value)" type="button" type="button"
     class="btn btn-dark mw-75" style="text-align: center; padding-bottom: 5px;"
     [disabled]="!attform.invalid">Save</button>
     <br>
   </form>
-</div>
+</div> -->
+
+
+ <div class="container">
+    <h3><u>Attendance Dashboard</u></h3>
+
+    <div>
+      <button id="btn1" routerLink="/firstyear">1st Year Students</button>
+      <button id="btn2" routerLink="/secondyear">2nd Year Students</button>
+    </div>
+ </div>
