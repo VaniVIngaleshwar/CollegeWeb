@@ -1,0 +1,22 @@
+.content{
+    margin-bottom: 50px;
+}
+
+.clgpic img{
+    width: 600px;
+    height: 300px;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.clgpic{
+    float: left;
+}
+
+.ptag p{
+    padding-top: 50px;
+    padding-left: 680px;
+    padding-right: 30px;
+    text-align: justify;
+    font-family: 'Pathway Extreme', sans-serif;
+}
