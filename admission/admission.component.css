@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Pathway+Extreme:wght@300&display=swap');
+
+
+.card{
+    margin-top: 5%;
+    border:solid black;
+    width: 500px;
+    height: 350px;
+    padding: 40px;
+  margin-left:30%;
+  /* background:#BBD6B8; */
+}
+
+.btn{
+  background-color: #999c99; 
+  border: black;
+  color: rgb(243, 239, 239);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background-color: #26262b; /* Green */
+  color: white;
+}
