@@ -1,0 +1,74 @@
+.container {
+    max-width: 1000px;
+    margin-top: 45px;
+    margin-left: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
+    padding: 24px; /* Assuming $base-spacing-unit = 24px */
+    font-family: "Source Sans Pro", sans-serif;
+    margin-bottom: 40px;
+  }
+
+  .table {
+    width: 100%;
+    border: 1px solid #eeeeee;
+  }
+  
+  .table-header {
+    display: flex;
+    width: 100%;
+    background: #28282b;
+    padding: 12px 0; /* Assuming $half-spacing-unit = 12px */
+    color: whitesmoke;
+    font-family: 'Pathway Extreme', sans-serif;
+  }
+  
+  .table-row {
+    display: flex;
+    width: 100%;
+    padding: 12px 0; /* Assuming $half-spacing-unit = 12px */
+    font-family: 'Pathway Extreme', sans-serif;
+    &:nth-of-type(odd) {
+      background: #eeeeee;
+    }
+  }
+  
+  .table-data,
+  .header__item {
+    flex: 1 1 20%;
+    text-align: center;
+  }
+  
+  .header__item {
+    text-transform: uppercase;
+  }
+  
+  .filter__link {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    padding-left: 24px; /* Assuming $base-spacing-unit = 24px */
+    padding-right: 24px; /* Assuming $base-spacing-unit = 24px */
+  
+    &::after {
+      content: "";
+      position: absolute;
+      right: -18px; /* Assuming $half-spacing-unit = 12px */
+      color: white;
+      font-size: 12px; /* Assuming $half-spacing-unit = 12px */
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  
+    &.desc::after {
+      content: "(desc)";
+    }
+  
+    &.asc::after {
+      content: "(asc)";
+    }
+  }
+  

@@ -1,0 +1,37 @@
+<button class="btn" routerLink="/admission" style="margin-top: 2%; margin-left: 2%;">Back</button>
+<div class="container">
+    <table class="table">
+      <thead class="table-header">
+        <tr>
+          <th>ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>DOB</th>
+          <th>Gender</th>
+          <th>Mother Name</th>
+          <th>Father Name</th>
+          <th>Contact</th>
+          <th>Address</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of admdata; let i=index" class="table-row">
+          <td class="table-data">{{i}}</td>
+          <td class="table-data">{{item.fname}}</td>
+          <td class="table-data">{{item.lname}}</td>
+          <td class="table-data">{{item.date}}</td>
+          <td class="table-data">{{item.gender}}</td>
+          <td class="table-data">{{item.mom}}</td>
+          <td class="table-data">{{item.dad}}</td>
+          <td class="table-data">{{item.contact}}</td>
+          <td class="table-data">{{item.address}}</td>
+          <td class="table-data">
+            <button (click)="deleteStudent(item)" type="button" class="btn">
+              <i class="bi bi-trash"></i>Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
