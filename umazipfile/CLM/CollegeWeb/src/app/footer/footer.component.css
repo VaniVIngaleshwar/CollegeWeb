@@ -1,0 +1,41 @@
+.displayflex{
+    width: 100%;
+    position: fixed;
+    bottom: 0; 
+}
+
+.nav{
+    background-color: #28282B;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+ 
+}
+
+.list{
+    margin-left: -30px;
+
+}
+
+.list ul li{
+    display: inline-block;
+    padding: 10px;
+    color: whitesmoke;
+    font-family: 'Pathway Extreme', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    letter-spacing: 1px;
+   
+}
+
+.list ul li:hover{
+    color:black;
+}
+
+p{
+    margin-right: 30px;
+    color: whitesmoke;
+    font-family: 'Pathway Extreme', sans-serif;
+    cursor: pointer;
+    letter-spacing: 1px;
+}

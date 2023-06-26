@@ -1,0 +1,15 @@
+<div class="card-container">
+    <div class="card" *ngFor="let subject of subjects">
+      <div class="card-header">
+        <h3>{{ subject }}</h3>
+      </div>
+      <div class="card-body">
+        <div *ngFor="let faculty of getFacultiesBySubject(subject)">
+          <h4>{{ faculty.name }}</h4>
+          <p>Email: {{ faculty.email }}</p>
+          <p>Phone: {{ faculty.phone }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Pathway+Extreme:wght@300&display=swap');
+
+.displayflex{
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+    margin-top: -15px;
+   
+}
+
+.displayflex img{
+    width: 200px;
+    height: 180px;
+}
+
+#amrit{
+    width: 120px;
+    height: 140px;
+}
+
+.heading{
+    width: 50%;
+}
+
+.heading p{
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    padding: 20px;
+    padding-left: 0px;
+    text-align: center;
+    margin-left: 5px;
+}
+
+.list{
+    display: flex;
+    align-items: center;
+    background-color: #28282B;
+    height: 40px;
+    margin-top: -18px;
+    padding-left: 265px;
+}
+
+.list ul li{
+    display: inline-block;
+    padding: 15px;
+    color: whitesmoke;
+    font-family: 'Pathway Extreme', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.list ul li:hover{
+    color:black;
+}
