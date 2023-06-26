@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { admissionModel } from 'src/app/admission/admissionmodel';
+import { admissionModel } from 'admission/admissionmodel';
 
 @Injectable({
   providedIn: 'root'

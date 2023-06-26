@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AdmissionApiService } from 'src/services/admission-api.service';
+import { AdmissionApiService } from 'admission-api.service';
 import { admissionModel } from '../admission/admissionmodel';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 

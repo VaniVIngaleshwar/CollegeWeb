@@ -12,7 +12,7 @@
 }
 
 .btn{
-  background-color: #999c99; 
+  background-color: #28282b; 
   border: black;
   color: rgb(243, 239, 239);
   padding: 15px 32px;
@@ -20,9 +20,13 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  border-radius: 5px;
 }
 
 .btn:hover {
-  background-color: #26262b; /* Green */
+  background-color: black; /* Green */
   color: white;
+}
+.container{
+  margin-bottom: 50px;
 }

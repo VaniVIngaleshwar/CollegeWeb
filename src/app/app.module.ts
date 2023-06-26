@@ -15,6 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AttendanceRecordComponent } from './attendance-record/attendance-record.component';
 import { FirstyearComponent } from './firstyear/firstyear.component';
 import { SecondyearComponent } from './secondyear/secondyear.component';
+import { AdmissionComponent } from 'admission/admission.component';
 
 
 @NgModule({
@@ -29,16 +30,15 @@ import { SecondyearComponent } from './secondyear/secondyear.component';
     AttendanceComponent,
     AttendanceRecordComponent,
     FirstyearComponent,
-    SecondyearComponent
+    SecondyearComponent,
+    AdmissionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule ,
-    ReactiveFormsModule
-    
-
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
