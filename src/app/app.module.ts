@@ -18,6 +18,7 @@ import { FirstyearComponent } from './firstyear/firstyear.component';
 import { SecondyearComponent } from './secondyear/secondyear.component';
 import { AdmissionComponent } from 'admission/admission.component';
 import { AttendanceComponent } from './attendance/attendance.component';
+import { StaffComponent } from './staff/staff.component';
 
 
 @NgModule({
@@ -29,12 +30,13 @@ import { AttendanceComponent } from './attendance/attendance.component';
     FooterComponent,
     CourseDetailsComponent,
     FeesComponent,
-    CoursedetailsComponent,
+    
     AttendanceComponent,
     AttendanceRecordComponent,
     FirstyearComponent,
     SecondyearComponent,
-    AdmissionComponent
+    AdmissionComponent,
+    StaffComponent
   ],
   imports: [
     BrowserModule,

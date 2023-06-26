@@ -11,6 +11,7 @@ import { FirstyearComponent } from './firstyear/firstyear.component';
 import { SecondyearComponent } from './secondyear/secondyear.component';
 import { AdmissionComponent } from 'admission/admission.component';
 import { AdmissionRecordComponent } from 'admission-record/admission-record.component';
+import { StaffComponent } from './staff/staff.component';
 
 const routes: Routes = [
   {path:'home', component:HomeComponent},
@@ -22,7 +23,7 @@ const routes: Routes = [
   {path:'admission', component:AdmissionComponent},
   {path:'admissionrecord', component:AdmissionRecordComponent},
   // keep this below line at last only dont disturb it ur remainig path u can attach above ok
-  
+  {path:'staff', component:StaffComponent},
   {path:'coursedetails', component:CoursedetailsComponent},
   {path:'fees', component:FeesComponent},
   {path:'', redirectTo:'home', pathMatch:'full'}
