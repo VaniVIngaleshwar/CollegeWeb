@@ -1,0 +1,65 @@
+{
+  "firstyearattendance": [
+    {
+      "rollno": 1,
+      "date": "2023-06-25",
+      "course": "firstyear-pcmb",
+      "attendance": "present",
+      "id": 1
+    },
+    {
+      "rollno": 2,
+      "date": "2023-06-25",
+      "course": "firstyear-pcmb",
+      "attendance": "absent",
+      "id": 2
+    },
+    {
+      "rollno": 1,
+      "date": "2023-06-25",
+      "course": "firstyear-pcmcs",
+      "attendance": "present",
+      "id": 3
+    },
+    {
+      "rollno": 2,
+      "date": "2023-06-25",
+      "course": "firstyear-pcmcs",
+      "attendance": "present",
+      "id": 4
+    }
+  ],
+  "secondyearattendance": [
+    {
+      "rollno": 1,
+      "date": "2023-06-25",
+      "course": "secondyear-pcmb",
+      "attendance": "present",
+      "id": 1
+    },
+    {
+      "rollno": 2,
+      "date": "2023-06-25",
+      "course": "secondyear-pcmb",
+      "attendance": "absent",
+      "id": 2
+    },
+    {
+      "rollno": 1,
+      "date": "2023-06-25",
+      "course": "secondyear-pcmcs",
+      "attendance": "present",
+      "id": 3
+    },
+    {
+      "rollno": 2,
+      "date": "2023-06-25",
+      "course": "secondyear-pcmcs",
+      "attendance": "present",
+      "id": 4
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

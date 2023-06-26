@@ -1,0 +1,90 @@
+<div class="container">
+    <h3><u>Second-Year Attendance</u></h3>
+    <div class="atdform">
+        <form [formGroup]="attendanceform">
+            <input type="number" placeholder="Roll No" formControlName="rollno">
+            <input type="date" placeholder="Date" formControlName="date">
+            <select formControlName="course">
+                <option value="" disabled selected>Select the course</option>
+                <option value="secondyear-pcmb" selected>Second Year-PCMB</option>
+                <option value="secondyear-pcmcs">Second Year-PCMCS</option>
+            </select>
+
+            <div class="radio">
+                <input type="radio" name="attendance" value="present" formControlName="attendance">Present
+                <input type="radio" name="attendance" value="absent" formControlName="attendance">Absent
+            </div>
+
+            <div>
+                <button id="btn1" (click)="onSave(this.attendanceform.value)">SAVE</button>
+                <button routerLink="/attendance">BACK</button>
+            </div>
+        </form>
+    </div>
+ </div>
+
+<!-- 
+ <div class="container2">
+    <h3><u>Attendance details</u></h3>
+    <div class="atdform">
+        <form>
+           
+            <input type="date" placeholder="Date">
+            <select >
+                <option value="secondyear-pcmb" selected>Second Year-PCMB</option>
+                <option value="secondyear-pcmcs">Second Year-PCMCS</option>
+            </select>
+
+            <div>
+                <button id="btn1">Search</button>
+                <button >BACK</button>
+            </div>
+        </form>
+    </div>
+ </div> -->
+
+
+ 
+ <div class="container2">
+    <h3><u>Attendance details</u></h3>
+    <div class="atdform">
+        <form (submit)="onSearch()">
+            <input type="date" placeholder="Date" name="date" [(ngModel)]="searchDate">
+            <select name="course" [(ngModel)]="searchCourse">
+                <option value="" disabled selected>Select the course</option>
+                <option  value="secondyear-pcmb">Second Year-PCMB</option>
+                <option value="secondyear-pcmcs">Second Year-PCMCS</option>
+            </select>
+
+            <div>
+                <button id="btn1" type="submit">Search</button>
+                <button routerLink="/attendance">BACK</button>
+            </div>
+        </form>
+    </div>
+
+   
+</div>
+
+
+
+<div class="tablecontent">
+    <table *ngIf="showTable" class="table">
+        <thead>
+            <tr class="table-header">
+                <th class="header__item">Roll No</th>
+                <th class="header__item">Date</th>
+                <th class="header__item">Course</th>
+                <th class="header__item">Attendance</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let attendance of searchResults" class="table-row">
+                <td class="table-data">{{ attendance.rollno }}</td>
+                <td class="table-data">{{ attendance.date }}</td>
+                <td class="table-data">{{ attendance.course }}</td>
+                <td class="table-data">{{ attendance.attendance }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

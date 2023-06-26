@@ -1,0 +1,138 @@
+<div class="container">
+    <h3><u>First-Year Attendance</u></h3>
+    <div class="atdform">
+        <form [formGroup]="attendanceform">
+            <input type="number" placeholder="Roll No" formControlName="rollno" name="rollno">
+            <input type="date" placeholder="Date" formControlName="date" name="date">
+            <select name="course" formControlName="course">
+                <option value="" disabled selected>Select the course</option>
+                <option value="firstyear-pcmb" selected>First Year-PCMB</option>
+                <option value="firstyear-pcmcs">First Year-PCMCS</option>
+            </select>
+
+            <div class="radio">
+                <input type="radio" name="attendance" value="present" formControlName="attendance">Present
+                <input type="radio" name="attendance" value="absent" formControlName="attendance">Absent
+            </div>
+
+            <div>
+                <button id="btn1" (click)="onSave(this.attendanceform.value)">SAVE</button>
+                <button routerLink="/attendance">BACK</button>
+            </div>
+        </form>
+    </div>
+ </div>
+
+<!-- 
+ <div class="container2">
+    <h3><u>Attendance details</u></h3>
+    <div class="atdform">
+        <form >
+           
+            <input type="date" placeholder="Date">
+            <select >
+                <option value="pcmb" selected>PCMB</option>
+                <option value="pcmcs">PCMCS</option>
+            </select>
+
+            <div>
+                <button id="btn1" type="submit">Search</button>
+                <button >BACK</button>
+            </div>
+        </form>
+    </div>
+ </div> -->
+ <!-- <div class="container">
+    <h3><u>Attendance</u></h3>
+    <div class="atdform">
+        <form [formGroup]="attendanceform">
+            <input type="number" placeholder="Roll No" formControlName="rollno" [(ngModel)]="attendanceform.value.rollno" name="rollno">
+            <input type="date" placeholder="Date" formControlName="date" [(ngModel)]="attendanceform.value.date" name="date">
+            <select name="course" formControlName="course" [(ngModel)]="attendanceform.value.course">
+                <option value="" disabled selected>Select the course</option>
+                <option value="pcmb" selected>PCMB</option>
+                <option value="pcmcs">PCMCS</option>
+            </select>
+
+            <div class="radio">
+                <input type="radio" name="attendance" value="present" formControlName="attendance" [(ngModel)]="attendanceform.value.attendance" name="attendance">Present
+                <input type="radio" name="attendance" value="absent" formControlName="attendance" [(ngModel)]="attendanceform.value.attendance" name="attendance">Absent
+            </div>
+
+            <div>
+                <button id="btn1" (click)="onSave(attendanceform.value)">SAVE</button>
+                <button>BACK</button>
+            </div>
+        </form>
+    </div>
+</div> -->
+
+
+
+
+ <div class="container2">
+    <h3><u>Attendance details</u></h3>
+    <div class="atdform">
+        <form (submit)="onSearch()">
+            <input type="date" placeholder="Date" name="date" [(ngModel)]="searchDate">
+            <select name="course" [(ngModel)]="searchCourse">
+                <option value="" disabled selected>Select the course</option>
+                <option  value="firstyear-pcmb">First Year-PCMB</option>
+                <option value="firstyear-pcmcs">First Year-PCMCS</option>
+            </select>
+
+            <div>
+                <button id="btn1" type="submit">Search</button>
+                <button routerLink="/attendance">BACK</button>
+            </div>
+        </form>
+    </div>
+
+   
+</div>
+
+<!-- <div>
+    <table *ngIf="showTable">
+        <thead>
+            <tr>
+                <th>Roll No</th>
+                <th>Date</th>
+                <th>Course</th>
+                <th>Attendance</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let attendance of searchResults">
+                <td>{{ attendance.rollno }}</td>
+                <td>{{ attendance.date }}</td>
+                <td>{{ attendance.course }}</td>
+                <td>{{ attendance.attendance }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div> -->
+
+
+<div class="tablecontent">
+    <table *ngIf="showTable" class="table">
+        <thead>
+            <tr class="table-header">
+                <th class="header__item">Roll No</th>
+                <th class="header__item">Date</th>
+                <th class="header__item">Course</th>
+                <th class="header__item">Attendance</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let attendance of searchResults" class="table-row">
+                <td class="table-data">{{ attendance.rollno }}</td>
+                <td class="table-data">{{ attendance.date }}</td>
+                <td class="table-data">{{ attendance.course }}</td>
+                <td class="table-data">{{ attendance.attendance }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+ 

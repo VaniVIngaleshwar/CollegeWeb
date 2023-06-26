@@ -1,0 +1,31 @@
+.container{
+  margin-left: 450px;
+  margin-top: 50px;
+}
+
+h3{
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
+  margin-left: 90px;
+}
+
+button{
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #28282b;
+  border: none;
+  border-radius: 5px;
+  width: 200px;
+  color: whitesmoke;
+  font-family: 'Pathway Extreme', sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+button:hover{
+  background-color: black;
+}
+
+#btn1{
+  margin-right: 20px;
+}

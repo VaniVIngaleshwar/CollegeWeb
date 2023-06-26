@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { admissionModel } from './admissionmodel';
-import { AdmissionApiService } from 'src/services/admission-api.service';
+import { admissionModel } from 'admission/admissionmodel';
+import { AdmissionApiService } from 'admission-api.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -10,7 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class AdmissionComponent {
 
-  admform!: FormGroup;
+  admform !: FormGroup;
   admdata: undefined | admissionModel[];
 
   constructor(private formbuilder: FormBuilder, private admapi: AdmissionApiService) { }

@@ -12,6 +12,13 @@ import { CourseDetailsComponent } from './course-details/course-details.componen
 import { FeesComponent } from './fees/fees.component';
 import { CoursedetailsComponent } from './coursedetails/coursedetails.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+// import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AttendanceRecordComponent } from './attendance-record/attendance-record.component';
+import { FirstyearComponent } from './firstyear/firstyear.component';
+import { SecondyearComponent } from './secondyear/secondyear.component';
+import { AdmissionComponent } from 'admission/admission.component';
+import { AttendanceComponent } from './attendance/attendance.component';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +29,12 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     FooterComponent,
     CourseDetailsComponent,
     FeesComponent,
-    CoursedetailsComponent
+    CoursedetailsComponent,
+    AttendanceComponent,
+    AttendanceRecordComponent,
+    FirstyearComponent,
+    SecondyearComponent,
+    AdmissionComponent
   ],
   imports: [
     BrowserModule,
